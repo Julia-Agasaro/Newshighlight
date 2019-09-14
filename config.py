@@ -2,10 +2,9 @@ import os
 
 class Config:
 
-    NEWS_API_BASE_URL ='https://newsapi.org/v2/sources?{}?api_key={}'
-    NEWS_API_KEY = os.environ.get('MOVIE_API_KEY')
-    SECRET_KEY = os.environ.get('SECRET_KEY')
-    pass
+    NEWS_API_URL ='https://newsapi.org/v2/sources?language=en&category={}&apiKey={}'
+    ARTICLES_BASE_URL ='https://newsapi.org/v2/everything?language=en&sources={}&apiKey={}'
+    NEWS_API_KEY = 'f8baffa0e0e6461981f2dc5d2871c3c7'
 
 class ProdConfig(Config):
     pass
