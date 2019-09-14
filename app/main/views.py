@@ -17,7 +17,8 @@ def index():
     bus_news = get_source('business')
     sci_news = get_source('science')
     ent_news = get_source('entertainment')
-    return render_template('index.html',  title= title, sports = sport_news, general = general_news, technology = tech_news, business = bus_news, science = sci_news, entertainment= ent_news)
+    health_news = get_source('health')
+    return render_template('index.html',  title= title, sports = sport_news, general = general_news, technology = tech_news, business = bus_news, science = sci_news, entertainment= ent_news ,health=health_news)
 
 @main.route('/news/<id>')
 def source(id):
