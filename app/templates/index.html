@@ -1,1 +1,66 @@
-<h1> Hello World </h1>
+{% extends 'base.html'%}
+{% block content %}
+<body>
+    <div class="container-fluid">
+        <div class="row">
+           <h3 style="text-align: center;color:#056b5b;"> General News</h3>
+   
+        {% for  general_news in general %}
+            <div class="col-md-2">
+                <div class="thumbnail">
+                    <div class="details">
+            <h4>{{ general_news.name}}</h5>
+            <p>{{general_news.description}}</p>
+            <p>Country:{{general_news.country}}</p>
+            <p><a href="/news/{{general_news.id}}">Read {{general_news.id}} Articles</a></p>     
+                </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="container-fluid">
+            <div class="row">
+     <h3 style="text-align: center;color:#056b5b;"> Sport News</h3>
+    
+        {% for  sport_news in sports %}
+        <div class="col-md-2">
+                <div class="thumbnail">
+                    <div class="details">
+            <h4>{{ sport_news.name}}</h5>
+            <p>{{sport_news.description}}</p>
+            <p>country:{{sport_news.country}}</p>
+        </div>
+    </div>
+</div>
+        {% endfor %}
+    </div>
+</div>
+<div class="container-fluid">
+        <div class="row">
+        <h3 style="text-align: center;color:#056b5b;"> Entertaiment News</h3>
+    
+        {% for  ent_news in entertainment %}
+        <div class="col-md-2">
+                <div class="thumbnail">
+                    <div class="details">
+            <h4>{{ ent_news.name}}</h5>
+            <p>{{ent_news.description}}</p>
+            <p>country:{{ent_news.country}}</p>
+        </div>
+    </div>
+</div>
+        {% endfor %}
+    </div>
+</div>
+   
+    <!-- Now showing movie -->
+    <!-- <h3>Science News</h3>
+     <ul>
+        {% for now_showing_movie in now_showing %}
+            <li>{{ now_showing_movie.title}}</li>
+        {% endfor %}
+    </ul> -->
+</body>
+
+{% endblock%}
