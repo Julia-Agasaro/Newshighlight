@@ -11,7 +11,6 @@
                     <div class="details">
             <h4>{{ general_news.name}}</h5>
             <p>{{general_news.description}}</p>
-            <p>Country:{{general_news.country}}</p>
             <p><a href="/news/{{general_news.id}}">Read {{general_news.id}} Articles</a></p>     
                 </div>
                 </div>
@@ -29,7 +28,7 @@
                     <div class="details">
             <h4>{{ sport_news.name}}</h5>
             <p>{{sport_news.description}}</p>
-            <p>country:{{sport_news.country}}</p>
+        <p><a href="/news/{{sport_news.id}}">Read {{sport_news.id}} Articles</a></p> 
         </div>
     </div>
 </div>
@@ -46,21 +45,66 @@
                     <div class="details">
             <h4>{{ ent_news.name}}</h5>
             <p>{{ent_news.description}}</p>
-            <p>country:{{ent_news.country}}</p>
+            <p><a href="/news/{{ent_news.id}}">Read {{ent_news.id}} Articles</a></p> 
         </div>
     </div>
 </div>
         {% endfor %}
     </div>
 </div>
+<div class="container-fluid">
+    <div class="row">
+    <h3 style="text-align: center;color:#056b5b;"> Health News</h3>
+
+    {% for  health_news in health %}
+    <div class="col-md-2">
+            <div class="thumbnail">
+                <div class="details">
+        <h4>{{ health_news.name}}</h5>
+        <p>{{health_news.description}}</p>
+        <p><a href="/news/{{health_news.id}}">Read {{health_news.id}} Articles</a></p> 
+    </div>
+</div>
+</div>
+    {% endfor %}
+</div>
+</div>
    
-    <!-- Now showing movie -->
-    <!-- <h3>Science News</h3>
-     <ul>
-        {% for now_showing_movie in now_showing %}
-            <li>{{ now_showing_movie.title}}</li>
+<div class="container-fluid">
+    <div class="row">
+       <h3 style="text-align: center;color:#056b5b;"> Business News</h3>
+
+    {% for  bus_news in business %}
+        <div class="col-md-2">
+            <div class="thumbnail">
+                <div class="details">
+        <h4>{{ bus_news.name}}</h5>
+        <p>{{bus_news.description}}</p>
+        <p><a href="/news/{{bus_news.id}}">Read {{bus_news.id}} Articles</a></p>     
+            </div>
+            </div>
+        </div>
         {% endfor %}
-    </ul> -->
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+       <h3 style="text-align: center;color:#056b5b;"> Technology News</h3>
+
+    {% for  tech_news in technology %}
+        <div class="col-md-2">
+            <div class="thumbnail">
+                <div class="details">
+        <h4>{{ tech_news.name}}</h5>
+        <p>{{tech_news.description}}</p>
+        <p><a href="/news/{{tech_news.id}}">Read {{tech_news.id}} Articles</a></p>     
+            </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
 </body>
 
 {% endblock%}
