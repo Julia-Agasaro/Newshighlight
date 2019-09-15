@@ -1,6 +1,6 @@
 # NEWSHIGHLIGHT
 News Highlight is a web application that lists and previews news articles from various sources.
-check it out[https://newshighlight44.herokuapp.com/]
+[check it out](https://newshighlight44.herokuapp.com/)
 
 # Author:
 Julia Agasaro
